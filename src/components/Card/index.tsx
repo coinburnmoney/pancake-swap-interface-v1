@@ -6,7 +6,7 @@ const Card = styled.div<any>`
   padding: 1.25rem;
   padding: ${({ padding }) => padding};
   border: ${({ border }) => border};
-  border-radius: ${({ borderRadius }) => borderRadius};
+  border-radius: 0;
 `
 export default Card
 

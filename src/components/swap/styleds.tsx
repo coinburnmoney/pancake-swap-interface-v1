@@ -7,6 +7,8 @@ import { AutoColumn } from '../Column'
 
 export const Wrapper = styled.div`
   position: relative;
+  border-radius:0;
+
 `
 
 export const ArrowWrapper = styled.div<{ clickable: boolean }>`
@@ -26,7 +28,7 @@ export const ArrowWrapper = styled.div<{ clickable: boolean }>`
 export const SectionBreak = styled.div`
   height: 1px;
   width: 100%;
-  background-color: ${({ theme }) => theme.colors.tertiary};
+  background-color: red;
 `
 
 export const BottomGrouping = styled.div`
@@ -49,13 +51,13 @@ export const StyledBalanceMaxMini = styled.button`
   width: 22px;
   background-color: ${({ theme }) => theme.colors.invertedContrast};
   border: none;
-  border-radius: 50%;
+  border-radius: 0%;
   padding: 0.2rem;
   font-size: 0.875rem;
   font-weight: 400;
   margin-left: 0.4rem;
   cursor: pointer;
-  color: ${({ theme }) => theme.colors.textSubtle};
+  color: red;
   display: flex;
   justify-content: center;
   align-items: center;

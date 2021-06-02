@@ -8,7 +8,7 @@ import useGetPriceData from 'hooks/useGetPriceData'
 import useGetLocalProfile from 'hooks/useGetLocalProfile'
 import useAuth from 'hooks/useAuth'
 import links from './config'
-import { CAKE } from '../../constants'
+import { CAKE,CBN } from '../../constants'
 
 const Menu: React.FC = (props) => {
   const { account } = useWeb3React()
@@ -26,12 +26,12 @@ const Menu: React.FC = (props) => {
       login={login}
       logout={logout}
       isDark={isDark}
-      toggleTheme={toggleTheme}
-      currentLang={selectedLanguage?.code || ''}
-      langs={allLanguages}
-      setLang={setSelectedLanguage}
-      cakePriceUsd={cakePriceUsd}
-      profile={profile}
+       toggleTheme={toggleTheme}
+       currentLang={selectedLanguage?.code || ''}
+       langs={allLanguages}
+       setLang={setSelectedLanguage}
+    // cakePriceUsd={cakePriceUsd}
+      // profile={profile}
       {...props}
     />
   )
