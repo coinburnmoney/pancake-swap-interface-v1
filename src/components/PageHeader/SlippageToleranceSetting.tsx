@@ -4,7 +4,7 @@ import { Box, Button, Flex, Input, Text } from '@pancakeswap-libs/uikit'
 import { useUserSlippageTolerance } from 'state/user/hooks'
 import QuestionHelper from '../QuestionHelper'
 
-const MAX_SLIPPAGE = 5000
+const MAX_SLIPPAGE = 9000
 const RISKY_SLIPPAGE_LOW = 50
 const RISKY_SLIPPAGE_HIGH = 500
 
@@ -34,6 +34,7 @@ const predefinedValues = [
   { label: '0.1%', value: 0.1 },
   { label: '0.5%', value: 0.5 },
   { label: '1%', value: 1 },
+  { label: '33%', value: 33 },
 ]
 
 type SlippageToleranceSettingsModalProps = {
@@ -67,9 +68,9 @@ const SlippageToleranceSettings = ({ translateString }: SlippageToleranceSetting
   // Notify user if slippage is risky
   useEffect(() => {
     if (userSlippageTolerance < RISKY_SLIPPAGE_LOW) {
-      setError(translateString(1146, 'Your transaction may fail'))
+     // setError(translateString(1146, 'Your transaction may fail'))
     } else if (userSlippageTolerance > RISKY_SLIPPAGE_HIGH) {
-      setError(translateString(1148, 'Your transaction may be frontrun'))
+    //  setError(translateString(1148, 'Your transaction may be frontrun'))
     }
   }, [userSlippageTolerance, setError, translateString])
 
